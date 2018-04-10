@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  NMCropImage
 //
-//  Created by zhy on 2018/4/10.
+//  Created by Nuomi1908 on 2018/4/10.
 //  Copyright © 2018年 Nuomi1908. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+    
+    ViewController *v = [ViewController new];
+    
+    self.window.rootViewController = v;
+    
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
